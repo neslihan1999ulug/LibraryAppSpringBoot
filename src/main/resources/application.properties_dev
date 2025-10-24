@@ -1,6 +1,6 @@
-spring.datasource.url=jdbc:postgresql://dpg-d3t1070dl3ps73b0mc7g-a.oregon-postgres.render.com/librarydatabase_jp8f
-spring.datasource.username=librarydatabase_jp8f_user
-spring.datasource.password=gtSdse8Qhrj3hOYFDfmbT4EV6tLv5Cq8
+spring.datasource.url=${DBURL}
+spring.datasource.username=${DBUSERNAME}
+spring.datasource.password=${DBPASSWORD}
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true

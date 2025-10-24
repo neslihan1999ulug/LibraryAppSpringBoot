@@ -15,4 +15,4 @@ COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["sh", "-c", "java -Dspring.datasource.url=jdbc:postgresql://${DBURL}:5432/${DBNAME} -Dspring.datasource.username=${DBUSERNAME} -Dspring.datasource.password=${DBPASSWORD} -jar app.jar"]
